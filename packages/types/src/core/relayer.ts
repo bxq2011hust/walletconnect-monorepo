@@ -62,6 +62,7 @@ export interface RelayerOptions {
   logger?: string | Logger;
   relayUrl?: string;
   projectId?: string;
+  backendJWT?: string;
 }
 
 export interface RelayerClientMetadata {

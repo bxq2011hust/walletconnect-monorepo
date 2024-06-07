@@ -77,6 +77,7 @@ export class Relayer extends IRelayer {
   private relayUrl: string;
   private projectId: string | undefined;
   private bundleId: string | undefined;
+  private backendJWT: string | undefined;
   private connectionStatusPollingInterval = 20;
   private staleConnectionErrors = ["socket hang up", "stalled", "interrupted"];
   private hasExperiencedNetworkDisruption = false;
@@ -107,6 +108,7 @@ export class Relayer extends IRelayer {
     this.publisher = new Publisher(this, this.logger);
 
     this.relayUrl = opts?.relayUrl || RELAYER_DEFAULT_RELAY_URL;
+    this.backendJWT = opts.backendJWT;
     this.projectId = opts.projectId;
     this.bundleId = getBundleId();
 
@@ -281,11 +283,14 @@ export class Relayer extends IRelayer {
     await this.transportDisconnect();
   }
 
-  public async transportOpen(relayUrl?: string) {
+  public async transportOpen(relayUrl?: string, backendJWT?: string) {
     await this.confirmOnlineStateOrThrow();
     if (relayUrl && relayUrl !== this.relayUrl) {
       this.relayUrl = relayUrl;
       await this.transportDisconnect();
+    }
+    if (backendJWT && backendJWT !== this.backendJWT) {
+      this.backendJWT = backendJWT;
     }
     // Always create new socket instance when trying to connect because if the socket was dropped due to `socket hang up` exception
     // It wont be able to reconnect
@@ -323,9 +328,10 @@ export class Relayer extends IRelayer {
     }
   }
 
-  public async restartTransport(relayUrl?: string) {
+  public async restartTransport(relayUrl?: string, backendJWT?: string) {
     if (this.connectionAttemptInProgress) return;
     this.relayUrl = relayUrl || this.relayUrl;
+    this.backendJWT = backendJWT || this.backendJWT;
     await this.confirmOnlineStateOrThrow();
     await this.transportClose();
     await this.transportOpen();
@@ -398,7 +404,10 @@ export class Relayer extends IRelayer {
     if (this.provider.connection) {
       this.unregisterProviderListeners();
     }
-    const auth = await this.core.crypto.signJWT(this.relayUrl);
+    let auth = this.backendJWT;
+    if (!auth) {
+      auth = await this.core.crypto.signJWT(this.relayUrl);
+    }
 
     this.provider = new JsonRpcProvider(
       new WsConnection(

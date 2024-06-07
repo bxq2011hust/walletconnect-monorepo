@@ -106,6 +106,7 @@ export class Core extends ICore {
       logger: this.logger,
       relayUrl: this.relayUrl,
       projectId: this.projectId,
+      backendJWT: opts?.backendJWT,
     });
     this.pairing = new Pairing(this, this.logger);
     this.verify = new Verify(this.projectId || "", this.logger);

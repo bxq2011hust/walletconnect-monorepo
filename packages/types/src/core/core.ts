@@ -22,6 +22,7 @@ export declare namespace CoreTypes {
     storageOptions?: KeyValueStorageOptions;
     maxLogBlobSizeInBytes?: number;
     customStoragePrefix?: string;
+    backendJWT?: string;
   }
 
   interface Metadata {
