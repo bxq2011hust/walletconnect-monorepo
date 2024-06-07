@@ -1,6 +1,6 @@
-import { Store } from "@walletconnect/core";
+import { Store } from "@bxq2011hust/walletconnect-core";
 import { Logger } from "@walletconnect/logger";
-import { AuthTypes, ICore } from "@walletconnect/types";
+import { AuthTypes, ICore } from "@bxq2011hust/walletconnect-types";
 
 import { AUTH_STORAGE_PREFIX, AUTH_REQUEST_CONTEXT } from "../constants";
 

@@ -1,5 +1,5 @@
 import { generateChildLogger, getLoggerContext, Logger } from "@walletconnect/logger";
-import { ICore, IVerify } from "@walletconnect/types";
+import { ICore, IVerify } from "@bxq2011hust/walletconnect-types";
 import { isBrowser, isTestRun, P256KeyDataType, verifyP256Jwt } from "@walletconnect/utils";
 import { FIVE_SECONDS, ONE_SECOND, toMiliseconds } from "@walletconnect/time";
 import { getDocument } from "@walletconnect/window-getters";

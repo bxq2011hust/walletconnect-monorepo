@@ -9,7 +9,7 @@ import {
   getDefaultLoggerOptions,
   getLoggerContext,
 } from "@walletconnect/logger";
-import { CoreTypes, ICore } from "@walletconnect/types";
+import { CoreTypes, ICore } from "@bxq2011hust/walletconnect-types";
 
 import {
   CORE_CONTEXT,
@@ -111,6 +111,7 @@ export class Core extends ICore {
       logger: this.logger,
       relayUrl: this.relayUrl,
       projectId: this.projectId,
+      backendJWT: opts?.backendJWT,
     });
     this.pairing = new Pairing(this, this.logger);
     this.verify = new Verify(this, this.logger, this.storage);

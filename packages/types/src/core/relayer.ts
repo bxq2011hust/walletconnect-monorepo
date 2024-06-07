@@ -71,6 +71,7 @@ export interface RelayerOptions {
   logger?: string | Logger;
   relayUrl?: string;
   projectId?: string;
+  backendJWT?: string;
 }
 
 export interface RelayerClientMetadata {
@@ -128,8 +129,8 @@ export abstract class IRelayer extends IEvents {
 
   public abstract unsubscribe(topic: string, opts?: RelayerTypes.UnsubscribeOptions): Promise<void>;
   public abstract transportClose(): Promise<void>;
-  public abstract transportOpen(relayUrl?: string): Promise<void>;
-  public abstract restartTransport(relayUrl?: string): Promise<void>;
+  public abstract transportOpen(relayUrl?: string, backendJWT?: string): Promise<void>;
+  public abstract restartTransport(relayUrl?: string, backendJWT?: string): Promise<void>;
   public abstract confirmOnlineStateOrThrow(): Promise<void>;
   public abstract handleBatchMessageEvents(messages: RelayerTypes.MessageEvent[]): Promise<void>;
   public abstract onLinkMessageEvent(

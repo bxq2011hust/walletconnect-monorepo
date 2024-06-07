@@ -1,5 +1,9 @@
 import EventEmmiter, { EventEmitter } from "events";
-import { ICore, CoreTypes, SignClientTypes } from "@walletconnect/types";
+import {
+  ICore,
+  CoreTypes,
+  SignClientTypes,
+} from "@bxq2011hust/walletconnect-types";
 import { AuthClientTypes } from "@walletconnect/auth-client";
 import { IWeb3WalletEngine } from "./engine";
 import { Logger } from "@walletconnect/logger";

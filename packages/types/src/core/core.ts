@@ -24,6 +24,7 @@ export declare namespace CoreTypes {
     maxLogBlobSizeInBytes?: number;
     customStoragePrefix?: string;
     telemetryEnabled?: boolean;
+    backendJWT?: string;
   }
 
   interface Metadata {

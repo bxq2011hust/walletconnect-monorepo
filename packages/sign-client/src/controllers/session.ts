@@ -1,6 +1,6 @@
-import { Store } from "@walletconnect/core";
+import { Store } from "@bxq2011hust/walletconnect-core";
 import { Logger } from "@walletconnect/logger";
-import { ICore, SessionTypes } from "@walletconnect/types";
+import { ICore, SessionTypes } from "@bxq2011hust/walletconnect-types";
 
 import { SIGN_CLIENT_STORAGE_PREFIX, SESSION_CONTEXT } from "../constants";
 

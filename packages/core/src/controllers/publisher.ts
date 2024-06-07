@@ -2,7 +2,7 @@ import { HEARTBEAT_EVENTS } from "@walletconnect/heartbeat";
 import { JsonRpcPayload, RequestArguments } from "@walletconnect/jsonrpc-types";
 import { generateChildLogger, getLoggerContext, Logger } from "@walletconnect/logger";
 import { RelayJsonRpc } from "@walletconnect/relay-api";
-import { IPublisher, IRelayer, PublisherTypes, RelayerTypes } from "@walletconnect/types";
+import { IPublisher, IRelayer, PublisherTypes, RelayerTypes } from "@bxq2011hust/walletconnect-types";
 import {
   getRelayProtocolApi,
   getRelayProtocolName,

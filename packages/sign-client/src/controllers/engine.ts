@@ -12,7 +12,7 @@ import {
   RELAYER_EVENTS,
   TRANSPORT_TYPES,
   VERIFY_SERVER,
-} from "@walletconnect/core";
+} from "@bxq2011hust/walletconnect-core";
 
 import {
   formatJsonRpcError,
@@ -44,7 +44,8 @@ import {
   PairingTypes,
   AuthTypes,
   EventClientTypes,
-} from "@walletconnect/types";
+} from "@bxq2011hust/walletconnect-types";
+
 import {
   calcExpiry,
   createDelayedPromise,

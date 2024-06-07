@@ -1,5 +1,5 @@
 import { generateChildLogger, getLoggerContext, Logger } from "@walletconnect/logger";
-import { ICore, IStore } from "@walletconnect/types";
+import { ICore, IStore } from "@bxq2011hust/walletconnect-types";
 import {
   getInternalError,
   isProposalStruct,

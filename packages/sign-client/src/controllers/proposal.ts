@@ -1,6 +1,6 @@
-import { Store } from "@walletconnect/core";
+import { Store } from "@bxq2011hust/walletconnect-core";
 import { Logger } from "@walletconnect/logger";
-import { ICore, ProposalTypes } from "@walletconnect/types";
+import { ICore, ProposalTypes } from "@bxq2011hust/walletconnect-types";
 
 import { SIGN_CLIENT_STORAGE_PREFIX, PROPOSAL_CONTEXT } from "../constants";
 
