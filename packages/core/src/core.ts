@@ -9,7 +9,7 @@ import {
   generatePlatformLogger,
   ChunkLoggerController,
 } from "@walletconnect/logger";
-import { CoreTypes, ICore } from "@walletconnect/types";
+import { CoreTypes, ICore } from "@bxq2011hust/walletconnect-types";
 
 import {
   Crypto,

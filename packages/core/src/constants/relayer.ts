@@ -6,6 +6,8 @@ export const RELAYER_DEFAULT_LOGGER = "error";
 
 export const RELAYER_DEFAULT_RELAY_URL = "wss://relay.walletconnect.com";
 export const RELAYER_FAILOVER_RELAY_URL = "wss://relay.walletconnect.org";
+export const FB_RELAYER_DEFAULT_RELAY_URL = "wss://wcrelay.wbchain.com";
+export const FB_RELAYER_FAILOVER_RELAY_URL = "wss://wcrelay.wbchain.com.cn";
 
 export const RELAYER_CONTEXT = "relayer";
 

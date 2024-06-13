@@ -8,7 +8,7 @@ import {
   RelayerTypes,
   PairingJsonRpcTypes,
   ExpirerTypes,
-} from "@walletconnect/types";
+} from "@bxq2011hust/walletconnect-types";
 import {
   getInternalError,
   parseUri,

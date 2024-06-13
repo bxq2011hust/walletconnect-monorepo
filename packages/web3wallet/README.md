@@ -17,7 +17,7 @@ npm install @walletconnect/web3wallet
 1. Initialization
 
 ```javascript
-import { Core } from "@walletconnect/core";
+import { Core } from "@bxq2011hust/walletconnect-core";
 import { Web3Wallet } from "@walletconnect/web3wallet";
 
 const core = new Core({

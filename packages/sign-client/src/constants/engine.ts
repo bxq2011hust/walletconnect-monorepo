@@ -1,5 +1,5 @@
 import { FIVE_MINUTES, ONE_DAY, ONE_HOUR, SEVEN_DAYS } from "@walletconnect/time";
-import { EngineTypes } from "@walletconnect/types";
+import { EngineTypes } from "@bxq2011hust/walletconnect-types";
 
 export const ENGINE_CONTEXT = "engine";
 

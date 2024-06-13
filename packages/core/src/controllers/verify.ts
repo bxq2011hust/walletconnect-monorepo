@@ -1,5 +1,5 @@
 import { generateChildLogger, getLoggerContext, Logger } from "@walletconnect/logger";
-import { IVerify } from "@walletconnect/types";
+import { IVerify } from "@bxq2011hust/walletconnect-types";
 import { isBrowser, isNode, isReactNative } from "@walletconnect/utils";
 import { FIVE_SECONDS, ONE_SECOND, toMiliseconds } from "@walletconnect/time";
 

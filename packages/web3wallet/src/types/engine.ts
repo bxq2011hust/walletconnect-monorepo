@@ -7,7 +7,7 @@ import {
   SessionTypes,
   EchoClientTypes,
   AuthTypes,
-} from "@walletconnect/types";
+} from "@bxq2011hust/walletconnect-types";
 import { IWeb3Wallet, Web3WalletTypes } from "./client";
 import EventEmitter from "events";
 

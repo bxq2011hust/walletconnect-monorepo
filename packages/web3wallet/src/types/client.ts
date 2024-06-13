@@ -6,7 +6,7 @@ import {
   Verify,
   AuthTypes,
   SignClientTypes,
-} from "@walletconnect/types";
+} from "@bxq2011hust/walletconnect-types";
 import { AuthClientTypes } from "@walletconnect/auth-client";
 import { IWeb3WalletEngine } from "./engine";
 import { Logger } from "@walletconnect/logger";

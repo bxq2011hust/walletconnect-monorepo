@@ -29,7 +29,7 @@ import {
   RelayerOptions,
   RelayerTypes,
   SubscriberTypes,
-} from "@walletconnect/types";
+} from "@bxq2011hust/walletconnect-types";
 import {
   createExpiringPromise,
   formatRelayRpcUrl,

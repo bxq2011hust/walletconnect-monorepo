@@ -1,5 +1,5 @@
 import { Logger } from "@walletconnect/logger";
-import { IAuth, ICore } from "@walletconnect/types";
+import { IAuth, ICore } from "@bxq2011hust/walletconnect-types";
 import { AuthPairingTopic } from "./authPairingTopic";
 import { AuthRequest } from "./authRequest";
 import { AuthKey } from "./authKey";

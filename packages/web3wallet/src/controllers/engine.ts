@@ -1,6 +1,6 @@
 import { AuthClient, AuthEngineTypes, IAuthClient } from "@walletconnect/auth-client";
-import { SignClient } from "@walletconnect/sign-client";
-import { ISignClient } from "@walletconnect/types";
+import { SignClient } from "@bxq2011hust/walletconnect-sign-client";
+import { ISignClient } from "@bxq2011hust/walletconnect-types";
 import { IWeb3WalletEngine, Web3WalletTypes } from "../types";
 
 export class Engine extends IWeb3WalletEngine {
