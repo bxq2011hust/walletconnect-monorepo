@@ -41,6 +41,7 @@ export class EventClient extends IEventClient {
 
   public init: IEventClient["init"] = async () => {
     if (isTestRun()) return;
+    if (!this.telemetryEnabled) return;
     try {
       const initEvent = {
         eventId: uuidv4(),
