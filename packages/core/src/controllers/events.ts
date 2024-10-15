@@ -18,7 +18,7 @@ export class EventClient extends IEventClient {
   private readonly storageVersion = EVENTS_STORAGE_VERSION;
   private events = new Map<string, EventClientTypes.Event>();
   private shouldPersist = false;
-  constructor(public core: ICore, public logger: Logger, telemetryEnabled = true) {
+  constructor(public core: ICore, public logger: Logger, telemetryEnabled = false) {
     super(core, logger, telemetryEnabled);
     this.logger = generateChildLogger(logger, this.context);
     this.telemetryEnabled = telemetryEnabled;
